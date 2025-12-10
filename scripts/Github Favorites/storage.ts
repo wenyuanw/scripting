@@ -4,6 +4,7 @@ export type RepoSetting = {
 }
 
 const REPO_LIST_STORAGE_KEY = "github.following.repos.v1"
+const GITHUB_TOKEN_KEY = "github.following.token.v1"
 
 export const DEFAULT_REPO_LIST: RepoSetting[] = [
   { owner: "vercel", name: "next.js" },
@@ -37,6 +38,26 @@ export const saveRepoList = (list: RepoSetting[]): RepoSetting[] => {
 export const resetRepoList = (): RepoSetting[] => {
   Storage.set(REPO_LIST_STORAGE_KEY, DEFAULT_REPO_LIST)
   return DEFAULT_REPO_LIST
+}
+
+/**
+ * 读取 GitHub Token
+ */
+export const loadGithubToken = (): string => {
+  return String(Storage.get<string>(GITHUB_TOKEN_KEY) ?? "").trim()
+}
+
+/**
+ * 保存 GitHub Token；空值会清除已有 token
+ */
+export const saveGithubToken = (token: string): string => {
+  const sanitized = String(token ?? "").trim()
+  if (sanitized.length === 0) {
+    Storage.remove(GITHUB_TOKEN_KEY)
+    return ""
+  }
+  Storage.set(GITHUB_TOKEN_KEY, sanitized)
+  return sanitized
 }
 
 /**

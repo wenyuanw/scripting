@@ -2,7 +2,7 @@
   "runInApp": false,
   "color": "systemIndigo",
   "name": "Github Favorites",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "intentInputTypes": [],
   "description": "展示你关注 GitHub 仓库列表。修改自 Github Trending 脚本。",
   "remoteResource": null,

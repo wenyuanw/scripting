@@ -1,16 +1,21 @@
 import { CachedData, GithubTrendingRepo } from "./types"
-import { loadRepoList } from "./storage"
+import { loadGithubToken, loadRepoList } from "./storage"
 
 export const REPO_CACHE_KEY = "github.following.cache.v1"
 const cacheTTL = 1000 * 60 * 30 // 30 分钟缓存
 
-async function fetchRepo(owner: string, name: string) {
+async function fetchRepo(owner: string, name: string, token?: string) {
   const url = `https://api.github.com/repos/${owner}/${name}`
+  const headers: Record<string, string> = {
+    Accept: "application/vnd.github+json",
+    "User-Agent": "scripting-github-repo",
+  }
+  if (token) {
+    headers.Authorization = `Bearer ${token}`
+  }
+
   const response = await fetch(url, {
-    headers: {
-      Accept: "application/vnd.github+json",
-      "User-Agent": "scripting-github-repo",
-    },
+    headers,
   })
 
   if (!response.ok) {
@@ -37,6 +42,7 @@ async function fetchRepo(owner: string, name: string) {
 export async function fetchData() {
   const now = Date.now()
   const cachedData = Storage.get<CachedData>(REPO_CACHE_KEY)
+  const token = loadGithubToken()
 
   if (cachedData != null && cachedData.expiresAt > now) {
     return cachedData.list
@@ -47,7 +53,7 @@ export async function fetchData() {
 
   for (const repo of favoriteRepos) {
     try {
-      const data = await fetchRepo(repo.owner, repo.name)
+      const data = await fetchRepo(repo.owner, repo.name, token)
       result.push({
         author: data.owner?.login ?? repo.owner,
         title: data.name ?? repo.name,

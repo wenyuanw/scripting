@@ -1,5 +1,5 @@
 import { Button, NavigationStack, Text, List, Section, TextField, HStack, VStack, Spacer, useState } from "scripting"
-import { loadRepoList, saveRepoList, resetRepoList, RepoSetting } from "./storage"
+import { loadGithubToken, loadRepoList, saveGithubToken, saveRepoList, resetRepoList, RepoSetting } from "./storage"
 import { REPO_CACHE_KEY } from "./data"
 
 export function SettingView() {
@@ -8,6 +8,7 @@ export function SettingView() {
   const [newOwner, setNewOwner] = useState("")
   const [newName, setNewName] = useState("")
   const [pendingDeleteIndex, setPendingDeleteIndex] = useState<number | null>(null)
+  const [token, setToken] = useState(loadGithubToken())
 
   const handleAddRepo = () => {
     const owner = newOwner.trim()
@@ -63,6 +64,12 @@ export function SettingView() {
     setNewName("")
     setShowAddRepoModal(false)
     setPendingDeleteIndex(null)
+  }
+
+  const handleSaveToken = () => {
+    const saved = saveGithubToken(token)
+    Storage.remove(REPO_CACHE_KEY)
+    setToken(saved)
   }
 
   return <NavigationStack>
@@ -125,6 +132,19 @@ export function SettingView() {
             暂无关注仓库，点击“添加仓库”开始设置
           </Text>
         )}
+      </Section>
+
+      <Section
+        header={<Text font="headline">API Token</Text>}
+        footer={<Text font="footnote" foregroundStyle="secondaryLabel">非必需。用于提升 GitHub API 频率限制。留空可清除。</Text>}
+      >
+        <TextField
+          title="GitHub Token"
+          value={token}
+          onChanged={setToken}
+          prompt="例如：ghp_xxx"
+        />
+        <Button title="保存 Token" action={handleSaveToken} />
       </Section>
 
       <Section
