@@ -1,0 +1,38 @@
+{
+  "color": "#8ac1eb",
+  "icon": "lightbulb",
+  "runInApp": false,
+  "intentInputTypes": [],
+  "name": "Hello World",
+  "version": "1.0.0",
+  "description": "A simple Hello World script",
+  "localizedNames": {
+    "zh": "你好，世界",
+    "fr": "Bonjour le monde",
+    "de": "Hallo Welt",
+    "ja": "こんにちは世界",
+    "es": "Hola mundo",
+    "it": "Ciao mondo",
+    "ko": "안녕하세요 세계",
+    "pt": "Olá mundo",
+    "ru": "Привет мир",
+    "ar": "مرحبا بالعالم"
+  },
+  "localizedDescriptions": {
+    "zh": "一个简单的Hello World脚本",
+    "fr": "Un script Hello World simple",
+    "de": "Ein einfaches Hello World-Skript",
+    "ja": "シンプルなHello Worldスクリプト",
+    "es": "Un script Hello World simple",
+    "it": "Uno script Hello World semplice",
+    "ko": "간단한 Hello World 스크립트",
+    "pt": "Um script Hello World simples",
+    "ru": "Простое Hello World скрипт",
+    "ar": "Hello World скрипт простой"
+  },
+  "author": {
+    "name": "Wenyuan",
+    "email": "i@wenyuanw.me",
+    "homepage": "https://github.com/wenyuanw"
+  }
+}
