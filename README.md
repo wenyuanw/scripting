@@ -19,9 +19,10 @@
 - 源码路径：`scripts/Github Favorites`
 - 展示你关注 GitHub 仓库列表。修改自 Github Trending 脚本(由于不知道作者信息，所以没有添加作者信息)。
 
-|     |     |
-| --- | --- |
-| ![01](imgs/github-favorites-01.png) | ![02](imgs/github-favorites-02.png) |
+<p align="center">
+  <img src="imgs/github-favorites-01.png" alt="Github Favorites 小组件预览" width="30%" />
+  <img src="imgs/github-favorites-02.png" alt="Github Favorites 运行页面" width="60%" />
+</p>
 
 ## References 🔗
 - [Scripting Doc](https://scripting.fun/doc_v2/zh/index)
