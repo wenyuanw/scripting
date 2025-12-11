@@ -1,0 +1,25 @@
+{
+  "runInApp" : false,
+  "color" : "rgba(243, 159, 68,1)",
+  "description" : null,
+  "name" : "SnippetIntent Test",
+  "version" : "1.0.0",
+  "localizedNames" : null,
+  "intentInputTypes" : [
+    "Text",
+    "URLs",
+    "Images",
+    "FileURLs"
+  ],
+  "author" : {
+    "name" : "thomfang",
+    "homepage" : "https:\/\/x.com\/thomfang",
+    "email" : "tilfon@live.com"
+  },
+  "icon" : "iphone",
+  "remoteResource" : null,
+  "localizedDescriptions" : null,
+  "contributors" : [
+
+  ]
+}

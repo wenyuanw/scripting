@@ -1,0 +1,25 @@
+{
+  "color" : "rgba(43, 190, 81,1)",
+  "icon" : "iphone",
+  "runInApp" : false,
+  "intentInputTypes" : [
+    "Text",
+    "URLs",
+    "Images",
+    "FileURLs"
+  ],
+  "version" : "1.0.0",
+  "localizedDescriptions" : null,
+  "remoteResource" : null,
+  "author" : {
+    "email" : "tilfon@live.com",
+    "homepage" : "https:\/\/x.com\/thomfang",
+    "name" : "thomfang"
+  },
+  "description" : null,
+  "contributors" : [
+
+  ],
+  "localizedNames" : null,
+  "name" : "Continue In Foreground Test"
+}
