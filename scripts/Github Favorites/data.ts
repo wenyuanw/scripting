@@ -1,5 +1,6 @@
 import { CachedData, GithubTrendingRepo } from "./types"
 import { loadGithubToken, loadRepoList } from "./storage"
+import { fetch } from "scripting"
 
 export const REPO_CACHE_KEY = "github.following.cache.v1"
 const cacheTTL = 1000 * 60 * 30 // 30 分钟缓存

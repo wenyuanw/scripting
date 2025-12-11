@@ -27,6 +27,5 @@
 ## References 🔗
 - [Scripting Doc](https://scripting.fun/doc_v2/zh/index)
 - [Ryan's Github Repository](https://github.com/ryanfwy/scripting)
-- [Github Trending Script](https://github.com/ryanfwy/scripting/tree/master/scripts/Github%20Trending)
 - [Docs Context7](https://context7.com/scriptingapp/scriptingapp.github.io)
 - [ChatGPT Scripting开发助手 from @mengnimen](https://chatgpt.com/g/g-68afb58dcf208191a767bbd75a05b7eb-scriptingkai-fa-zhu-shou)
