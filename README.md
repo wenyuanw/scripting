@@ -24,6 +24,18 @@
   <img src="imgs/github-favorites-02.png" alt="Github Favorites 运行页面" width="60%" />
 </p>
 
+### Pickup Code
+
+[点击安装](https://scripting.fun/import_scripts?urls=%5B%22https%3A%2F%2Fgithub.com%2Fwenyuanw%2Fscripting%2Fraw%2Frefs%2Fheads%2Fmain%2Frelease%2FPickup%2520Code.scripting%22%5D)
+
+- 源码路径：`scripts/Pickup Code`
+- 脚本使用大模型通过截图或照片来解析取餐信息，再通过【实时活动】来展示取餐码。修改自 Ryan 大佬的【[取码器小助手](https://github.com/ryanfwy/scripting/tree/master?tab=readme-ov-file#pickup-code-assistant)】，感谢大佬的分享。
+
+<p align="center">
+  <img src="imgs/pickup-code-01.png" alt="Pickup Code 小组件预览" width="30%" />
+  <img src="imgs/pickup-code-02.png" alt="Pickup Code 运行页面" width="60%" />
+</p>
+
 ## References 🔗
 - [Scripting Doc](https://scripting.fun/doc_v2/zh/index)
 - [Ryan's Github Repository](https://github.com/ryanfwy/scripting)
