@@ -352,13 +352,11 @@ function LargeWidgetView({
       
       {/* 商品信息卡片 */}
       {items ? (
-        <VStack alignment="leading" spacing={0}>
-          <HStack spacing={0}>
-            <RoundedRectangle
-              fill={"secondarySystemGroupedBackground"}
-              cornerRadius={12}
-            />
-          </HStack>
+        <ZStack alignment="topLeading">
+          <RoundedRectangle
+            fill={"secondarySystemGroupedBackground"}
+            cornerRadius={12}
+          />
           <VStack alignment="leading" spacing={8} padding={16}>
             <Text
               font={"caption"}
@@ -375,7 +373,7 @@ function LargeWidgetView({
               {formatItems(items)}
             </Text>
           </VStack>
-        </VStack>
+        </ZStack>
       ) : null}
       
       <Spacer />
