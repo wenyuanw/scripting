@@ -61,7 +61,6 @@ function SmallWidgetView({
 
   return (
     <VStack
-      background="systemBackground"
       padding={16}
       spacing={0}
       alignment="center"
@@ -150,7 +149,6 @@ function MediumWidgetView({
 
   return (
     <VStack
-      background="systemBackground"
       padding={16}
       spacing={0}
     >
@@ -246,7 +244,6 @@ function SmallEmptyView() {
   const accent = getSetting("systemColor")
   return (
     <VStack
-      background="systemBackground"
       padding={14}
       spacing={0}
       alignment="center"
@@ -306,7 +303,6 @@ function LargeWidgetView({
 
   return (
     <VStack
-      background="systemBackground"
       padding={20}
       spacing={0}
     >
@@ -425,7 +421,6 @@ function MediumEmptyView() {
   const accent = getSetting("systemColor")
   return (
     <VStack
-      background="systemBackground"
       padding={16}
       spacing={0}
       alignment="center"
@@ -476,7 +471,6 @@ function LargeEmptyView() {
   const accent = getSetting("systemColor")
   return (
     <VStack
-      background="systemBackground"
       padding={20}
       spacing={0}
       alignment="center"
@@ -582,8 +576,7 @@ async function main() {
 
     // 显示错误信息
     Widget.present(
-      <VStack 
-        background="systemBackground"
+      <VStack
         spacing={8} 
         padding={16}
         alignment="center"
